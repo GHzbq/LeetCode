@@ -56,8 +56,20 @@ private:
 };
 #endif
 
-#if 1
+#if 0
 class Solution {
+public:
+    vector<string> generateParenthesis(int n) {
+        std::vector<std::string> ret;
+        if (n <= 0) {
+            return ret;
+        }
+        std::string current;
+        // 通过递归生成所有序列
+        generateAll(current, n * 2, &ret);
+        return ret;
+    }
+private:
     bool isValid(const std::string& s) {
         int balance = 0;
         for (char c : s) {
@@ -73,29 +85,54 @@ class Solution {
         return balance == 0;
     }
 
-    void generateAll(std::string& current, int n, std::vector<std::string>* result) {
+    void generateAll(std::string& current, int n, std::vector<std::string>* ret) {
         if (current.size() == n) {
             if (isValid(current))
-                result->push_back(current);
+                ret->push_back(current);
             return;
         }
         current += '(';
-        generateAll(current, n, result);
-        current.pop_back();
+        generateAll(current, n, ret);
+        current.pop_back(); // 这里的pop_back一定不能忘记
         current += ')';
-        generateAll(current, n, result);
+        generateAll(current, n, ret);
         current.pop_back();
     }
+};
+#endif
+
+#if 1 
+// 回溯
+class Solution {
 public:
     vector<string> generateParenthesis(int n) {
-        std::vector<std::string> result;
+        std::vector<std::string> ret;
         if (n <= 0) {
             return ret;
         }
         std::string current;
-        generateAll(current, n * 2, &result);
-        return result;
+        backtrack(&ret, current, 0, 0, n);
+        return ret;
+    }
+private:
+    void backtrack(std::vector<std::string>* ret, std::string& cur, int left, int right, int n) {
+        // 每个括号都是保证有效才放置的，所以不需要再判断是否有效
+        if (cur.size() == n * 2) {
+            ret->push_back(cur);
+            return;
+        }
+        // 如果左括号数量小于n，则可以放置一个 '('
+        if (left < n) {
+            cur.push_back('(');
+            backtrack(ret, cur, left + 1, right, n);
+            cur.pop_back();
+        }
+        // 如果右括号数量小于左括号数量，则可以放置一个 ')'
+        if (right < left) {
+            cur.push_back(')');
+            backtrack(ret, cur, left, right + 1, n);
+            cur.pop_back();
+        }
     }
 };
-
 #endif 
