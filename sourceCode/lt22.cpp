@@ -57,4 +57,45 @@ private:
 #endif
 
 #if 1
+class Solution {
+    bool isValid(const std::string& s) {
+        int balance = 0;
+        for (char c : s) {
+            if (c == '(') {
+                ++balance;
+            } else {
+                --balance;
+                if (balance < 0) {
+                    return false;
+                }
+            }
+        }
+        return balance == 0;
+    }
+
+    void generateAll(std::string& current, int n, std::vector<std::string>* result) {
+        if (current.size() == n) {
+            if (isValid(current))
+                result->push_back(current);
+            return;
+        }
+        current += '(';
+        generateAll(current, n, result);
+        current.pop_back();
+        current += ')';
+        generateAll(current, n, result);
+        current.pop_back();
+    }
+public:
+    vector<string> generateParenthesis(int n) {
+        std::vector<std::string> result;
+        if (n <= 0) {
+            return ret;
+        }
+        std::string current;
+        generateAll(current, n * 2, &result);
+        return result;
+    }
+};
+
 #endif 
