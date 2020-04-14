@@ -1,25 +1,10 @@
-两数相加
-====================
+#include <iostream>
 
-[TOC]
-
-## 1. 题目链接
-
-[两数相加II](https://leetcode-cn.com/problems/add-two-numbers-ii/)
-
-## 2. 解题思路
-
-### 2.1 翻转链表
-
-> 这道题和第二题[2.两数相加](https://leetcode-cn.com/problems/add-two-numbers/)很类似，只不过数字高低位顺序不同，我们只需要将链表逆置就可以了，所以题目分两步：
-> 1. 逆置链表
-> 2. 求和
->
-> 最后返回逆置求和之后的链表即可
-
-### 2.2 翻转链表C++代码实现
-
-```c++
+struct ListNode {
+	int val;
+	ListNode* next;
+	ListNode(int x) : val(x), next(NULL) {}
+};
 
 /**
  * Definition for singly-linked list.
@@ -107,5 +92,3 @@ private:
     }
 };
 #endif
-
-```
