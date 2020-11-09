@@ -1,6 +1,7 @@
 //
 // Created by zhangbaqing on 2020/11/9.
 //
+// https://leetcode-cn.com/problems/string-to-integer-atoi/
 
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
@@ -9,52 +10,6 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
-
-#if 0
-/**
- * 自动机
- */
-class Automaton {
-    std::string state = "start";
-    std::unordered_map<std::string, std::vector<std::string>> table = {
-            {"start", {"start", "signed", "in_number", "end"}},
-            {"signed", {"end", "end", "in_number", "end"}},
-            {"in_number", {"end", "end", "in_number", "end"}},
-            {"end", {"end", "end", "end", "end"}}
-    };
-
-    static int getCol(char c) {
-        if (isspace(c)) return 0;
-        if (c == '+' or c == '-') return 1;
-        if (isdigit(c)) return 2;
-        return 3;
-    }
-public:
-    int sign = 1;
-    long long ans = 0;
-
-    void get(char c) {
-        state = table[state][getCol(c)];
-        if (state == "in_number") {
-            ans = ans * 10 + c - '0';
-            ans = sign == 1 ? std::min(ans, (long long)INT_MAX) : std::min(ans, -(long long)INT_MIN);
-        } else if (state == "signed") {
-            sign = c == '+' ? 1 : -1;
-        }
-
-    }
-};
-
-class Solution {
-public:
-    int myAtoi(std::string str) {
-        Automaton automaton;
-        for (char c : str)
-            automaton.get(c);
-        return automaton.sign * automaton.ans;
-    }
-};
-#endif
 
 enum State {
     START, SIGNED, IN, END
