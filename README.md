@@ -13,7 +13,11 @@ LeetCode
 | 000008 | [字符串转换整数(atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) | [C++](all_question/lt000008.string-to-integer-atoi.md) | 中等 |
 | 000022 | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/) | [C++](./all_question/22.generate_parentheses.md) | 中等 |
 | 000031 | [下一个排列](https://leetcode-cn.com/problems/next-permutation/) | [C++](./all_question/lt000031.next-permutation.md) | 中等 |
+| 000134 | [加油站](https://leetcode-cn.com/problems/gas-station/) | [C++](./all_question/lt000134.gas-station.md) | 中等 |
+| 000147 | [对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | [C++](./all_question/lt000147.insertion-sort-list.md) | 中等 |
+| 000283 | [移动零](https://leetcode-cn.com/problems/move-zeroes/) | [C++](./all_question/lt000283.move-zeroes.md) | 简单 |
 | 000402 | [移掉K位数字](https://leetcode-cn.com/problems/remove-k-digits/) | [C++](./all_question/lt000402.remove-k-digits.md) | 中等 |
 | 000445 | [两数相加II](https://leetcode-cn.com/problems/add-two-numbers-ii/) | [C++](./all_question/445.add_two_numbers_ii.md) | 中等 |
+| 000860 | [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change/) | [C++](./all_question/lt000860.lemonade-change.md) | 简单 |
 | 001122 | [数字的相对排序](https://leetcode-cn.com/problems/relative-sort-array/) | [C++](./all_question/lt001122.relative-sort-array.md) | 简单 |
 | 面试题17.13 | [恢复空格](https://leetcode-cn.com/problems/re-space-lcci/) | [C++](./all_question/17.13.re_space_lcci.md) | 中等  |
