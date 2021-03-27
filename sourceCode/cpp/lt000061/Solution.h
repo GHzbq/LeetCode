@@ -1,11 +1,10 @@
 //
-// Created by zhangbaqing on 2021/3/26.
+// Created by zhangbaqing on 2021/3/27.
 //
-// https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
+// https://leetcode-cn.com/problems/rotate-list/
 
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
-
 
 struct ListNode {
     int val;
@@ -21,25 +20,34 @@ struct ListNode {
 
 #if true
 
-/**
- * 解法一：
- * 思路：遇见比自己小的或者相等的，删~~
- * */
 class Solution {
 public:
-    ListNode *deleteDuplicates(ListNode *head) {
+    ListNode *rotateRight(ListNode *head, int k) {
         if ((nullptr == head) || (nullptr == head->next)) {
             return head;
         }
-        // 1 -> 1 -> 2 -> null
+        int len = 0;
         ListNode *pCur = head;
-        while (nullptr != pCur->next) {
-            if (pCur->next->val <= pCur->val) {
-                pCur->next = pCur->next->next;
-                continue;
-            }
+        // 获取链表的长度
+        while (nullptr != pCur) {
+            ++len;
             pCur = pCur->next;
         }
+        // 去掉没必要的循环
+        // 1->2->3->null 循环3次，和没旋转一样，循环4次，和旋转一次一样
+        k %= len;
+        k = len - k;
+        pCur = head;
+        for (int i = 1; i < k; ++i) {
+            pCur = pCur->next;
+        }
+        ListNode *pTail = pCur;
+        while (pTail->next) {
+            pTail = pTail->next;
+        }
+        pTail->next = head;
+        head = pCur->next;
+        pCur->next = nullptr;
         return head;
     }
 };
@@ -59,7 +67,7 @@ public:
  */
 class Solution {
 public:
-    ListNode* deleteDuplicates(ListNode* head) {
+    ListNode* rotateRight(ListNode* head, int k) {
 
     }
 };
