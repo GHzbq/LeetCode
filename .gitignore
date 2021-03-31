@@ -35,3 +35,9 @@
 .idea
 sourceCode/cpp/cmake-build-debug
 sourceCode/cpp/main.cpp
+
+# java project
+**/.idea
+**/target
+**/*.iml
+**/test
