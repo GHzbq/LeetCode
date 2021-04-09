@@ -12,7 +12,7 @@
 
 using std::vector;
 
-#if false
+#if true
 
 class Solution {
 public:
@@ -39,7 +39,7 @@ public:
 
 #endif
 
-#if true
+#if false
 
 class Solution {
 public:
