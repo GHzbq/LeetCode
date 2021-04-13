@@ -29,6 +29,7 @@ public:
             while (rightUnit <= right) {
                 rightUnit *= 10;
             }
+            // 降序排列，重载大于号！
             // return 522 > 252;
             return left * rightUnit + right > right * leftUnit + left;
         });
