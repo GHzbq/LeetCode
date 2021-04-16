@@ -24,6 +24,32 @@ public:
         }
         return second;
     }
+
+    // 剑指offer 10-II 青蛙跳台接问题
+    // https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
+    // -----
+    // 超出时间限制
+//    int numWays(int n) {
+//        // 0级台阶也要跳一步
+//        if (n == 0) {
+//            return 1;
+//        }
+//        if (n <= 2) {
+//            return n;
+//        }
+//        const int MOD = 1e9 + 7;
+//        return (numWays(n - 1) + numWays(n - 2)) % MOD;
+//    }
+    int numWays(int n) {
+        int first = 1, second = 1, sum = 0;
+        const int MOD = 1e9 + 7;
+        for (int i = 0; i < n; ++i) {
+            sum = (first + second) % MOD;
+            first = second;
+            second = sum;
+        }
+        return first;
+    }
 };
 
 #endif
