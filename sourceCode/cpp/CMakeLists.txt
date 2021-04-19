@@ -80,4 +80,5 @@ add_executable(LeetCode main.cpp
         lt005735/Solution.h
         lt005736/Solution.h
         lt005737/Solution.h
-        offer012/Solution.h)
+        offer012/Solution.h
+        offer013/Solution.h)
