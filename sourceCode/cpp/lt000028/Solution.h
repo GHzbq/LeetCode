@@ -1,6 +1,8 @@
 //
 // Created by zhangbaqing on 2021/4/20.
 //
+// 28. 实现strStr()
+// https://leetcode-cn.com/problems/implement-strstr/
 
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H

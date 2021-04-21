@@ -1,10 +1,13 @@
 //
 // Created by zhangbaqing on 2021/3/26.
 //
+// 91.解码方法
+// https://leetcode-cn.com/problems/decode-ways/
 
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
 #include <string>
 #include <unordered_map>
 
@@ -24,7 +27,7 @@ using std::string;
  *      如果s[i-1] == '2' && '1' <= s[i] <= '6', 那么dp[i+1] = dp[i] + dp[i-1]
  *      否则，dp[i+1] = dp[i]，也只有一种解码方式，不会新增
  *      例如 "106",当i=2时，s[i-1]: '0', s[i]: '6'
- *      他其实只能从 "10"+"6"这一种方式演化而来，不肯有别的方式
+ *      他其实只能从 "10"+"6"这一种方式演化而来，不可能有别的方式
  *      再比如"32",当i=1时，s[i-1]: '3', s[i]: '2'
  *      他也只能通过 "3" + "2"演化而来，唯一的解码方式，不会变多
  *      再比如"2227",当i=3时，s[i-1]: '2', s[i]: '7'
