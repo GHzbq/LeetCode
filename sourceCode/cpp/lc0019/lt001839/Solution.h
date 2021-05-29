@@ -1,6 +1,7 @@
 //
 // Created by zhangbaqing on 2021/4/25.
 //
+// 1839. 所有元音按顺序排布的最长子字符串
 // 5740.所有原因按顺序排布的最长子字符串
 // https://leetcode-cn.com/problems/longest-substring-of-all-vowels-in-order/
 // 难度：中等

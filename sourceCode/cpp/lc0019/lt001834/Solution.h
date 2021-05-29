@@ -1,6 +1,7 @@
 //
 // Created by zhangbaqing on 2021/4/18.
 //
+// 1834. 单线程 CPU
 // 5736.单线程CPU
 // https://leetcode-cn.com/problems/single-threaded-cpu/
 // 难度：中等

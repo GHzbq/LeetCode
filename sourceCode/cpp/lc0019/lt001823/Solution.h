@@ -1,7 +1,9 @@
 //
 // Created by zhangbaqing on 2021/4/11.
 //
+// 1823. 找出游戏的获胜者
 // https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/
+// medium
 
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H

@@ -7,6 +7,7 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
 #include <unordered_map>
 #include <unordered_set>
 #include <iterator>

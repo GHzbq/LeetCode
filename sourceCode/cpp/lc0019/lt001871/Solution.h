@@ -1,6 +1,7 @@
 //
 // Created by zhangbaqing on 2021/5/23.
 //
+// 1871. 跳跃游戏 VII
 // 5765.跳跃游戏
 // https://leetcode-cn.com/problems/jump-game-vii/
 // medium
