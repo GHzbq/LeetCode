@@ -1,6 +1,7 @@
 //
 // Created by zhangbaqing on 2021/4/18.
 //
+// 1835. 所有数对按位与结果的异或和
 // 5737.所有数对按位与结果的异或和
 // https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/
 // 难度：hard

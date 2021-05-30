@@ -1,6 +1,7 @@
 //
 // Created by zhangbaqing on 2021/4/17.
 //
+// 1829.每个查询的最大异或值
 // 5719.每个查询的最大异或值
 // https://leetcode-cn.com/problems/maximum-xor-for-each-query/
 // 难度：中等

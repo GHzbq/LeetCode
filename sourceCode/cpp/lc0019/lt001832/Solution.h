@@ -1,6 +1,7 @@
 //
 // Created by zhangbaqing on 2021/4/18.
 //
+// 1832. 判断句子是否为全字母句
 // 5734.判断句子是否为全字母句
 // https://leetcode-cn.com/problems/check-if-the-sentence-is-pangram/
 // 难度：easy
